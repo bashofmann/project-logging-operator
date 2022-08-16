@@ -1,0 +1,53 @@
+apiVersion: v1
+entries:
+  project-logging-operator:
+  - annotations:
+      catalog.cattle.io/certified: rancher
+      catalog.cattle.io/display-name: Project Logging Operator
+      catalog.cattle.io/kube-version: '>=1.16.0-0'
+      catalog.cattle.io/namespace: cattle-logging-system
+      catalog.cattle.io/os: linux,windows
+      catalog.cattle.io/permits-os: linux,windows
+      catalog.cattle.io/provides-gvr: helm.cattle.io.projecthelmchart/v1alpha1
+      catalog.cattle.io/rancher-version: '>= 2.6.5-0 <= 2.6.100-0'
+      catalog.cattle.io/release-name: project-logging-operator
+    apiVersion: v2
+    appVersion: 0.1.0
+    created: "2022-08-16T13:32:39.716964+02:00"
+    dependencies:
+    - condition: helmProjectOperator.enabled
+      name: helmProjectOperator
+      repository: file://./charts/helmProjectOperator
+    description: Project Logging Operator
+    digest: 8aa7399ee036edcca68f86216e7021434ada880b616c3073fde1028c747bcb8e
+    name: project-logging-operator
+    urls:
+    - assets/project-logging-operator/project-logging-operator-0.1.0.tgz
+    version: 0.1.0
+  rancher-project-logging:
+  - annotations:
+      catalog.cattle.io/certified: rancher
+      catalog.cattle.io/display-name: Project Logging
+      catalog.cattle.io/hidden: "true"
+      catalog.cattle.io/kube-version: '>=1.16.0-0'
+      catalog.cattle.io/permits-os: linux,windows
+      catalog.cattle.io/rancher-version: '>= 2.6.5-0 <= 2.6.100-0'
+      catalog.cattle.io/release-name: rancher-project-logging
+    apiVersion: v2
+    appVersion: 0.1.0
+    created: "2022-08-16T13:32:39.725091+02:00"
+    description: Creates rancher-logging ClusterFlows that automatically collect logs
+      from all namespaces of a project
+    digest: 99f0e61d0ad03cea18896e4d5b6bb580de05889cc178e89615c683ca5872b6e5
+    keywords:
+    - logging
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: bastian.hofmann@suse.com
+      name: Bastian Hofmann
+    name: rancher-project-logging
+    type: application
+    urls:
+    - assets/rancher-project-logging/rancher-project-logging-0.1.0.tgz
+    version: 0.1.0
+generated: "2022-08-16T13:32:39.716127+02:00"

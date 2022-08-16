@@ -1,0 +1,10 @@
+/.dapper
+/.cache
+/bin
+/dist
+*.swp
+.idea
+/project-logging-operator
+/.charts-build-scripts
+*.DS_Store
+/Dockerfile.dapper*

@@ -1,0 +1,8 @@
+global:
+  cattle:
+    systemDefaultRegistry: ""
+    projectNamespaceSelector: {}
+    projectNamespaces: []
+    projectID: ""
+
+outputs: []

@@ -1,0 +1,11 @@
+kind: ClusterFlow
+metadata:
+  name: flow-sample
+  namespace: cattle-logging-system
+spec:
+  match:
+  - select:
+      namespaces:
+{{ .Values.global.cattle.projectNamespaces | toYaml | indent 6 }}
+  globalOutputRefs:
+{{ .Values.outputs | toYaml | indent 2 }}

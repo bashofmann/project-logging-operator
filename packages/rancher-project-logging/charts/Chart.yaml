@@ -1,0 +1,21 @@
+annotations:
+  catalog.cattle.io/certified: rancher
+  catalog.cattle.io/display-name: Project Logging
+  catalog.cattle.io/hidden: "true"
+  catalog.cattle.io/kube-version: '>=1.16.0-0'
+  catalog.cattle.io/permits-os: linux,windows
+  catalog.cattle.io/rancher-version: '>= 2.6.5-0 <= 2.6.100-0'
+  catalog.cattle.io/release-name: rancher-project-logging
+apiVersion: v2
+appVersion: 0.1.0
+description: Creates rancher-logging ClusterFlows that automatically collect logs
+  from all namespaces of a project
+keywords:
+- logging
+kubeVersion: '>=1.16.0-0'
+maintainers:
+- email: bastian.hofmann@suse.com
+  name: Bastian Hofmann
+name: rancher-project-logging
+type: application
+version: 0.1.0

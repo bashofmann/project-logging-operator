@@ -1,0 +1,19 @@
+annotations:
+  catalog.cattle.io/certified: rancher
+  catalog.cattle.io/display-name: Project Logging Operator
+  catalog.cattle.io/kube-version: '>=1.16.0-0'
+  catalog.cattle.io/namespace: cattle-logging-system
+  catalog.cattle.io/os: linux,windows
+  catalog.cattle.io/permits-os: linux,windows
+  catalog.cattle.io/provides-gvr: helm.cattle.io.projecthelmchart/v1alpha1
+  catalog.cattle.io/rancher-version: '>= 2.6.5-0 <= 2.6.100-0'
+  catalog.cattle.io/release-name: project-logging-operator
+apiVersion: v2
+appVersion: 0.1.0
+dependencies:
+- condition: helmProjectOperator.enabled
+  name: helmProjectOperator
+  repository: file://./charts/helmProjectOperator
+description: Project Logging Operator
+name: project-logging-operator
+version: 0.1.0
