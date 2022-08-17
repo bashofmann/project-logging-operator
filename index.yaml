@@ -12,14 +12,14 @@ entries:
       catalog.cattle.io/rancher-version: '>= 2.6.5-0 <= 2.6.100-0'
       catalog.cattle.io/release-name: project-logging-operator
     apiVersion: v2
-    appVersion: 0.1.0
-    created: "2022-08-17T11:30:31.516353+02:00"
+    appVersion: v0.1.0
+    created: "2022-08-17T14:39:18.390662+02:00"
     dependencies:
     - condition: helmProjectOperator.enabled
       name: helmProjectOperator
       repository: file://./charts/helmProjectOperator
     description: Project Logging Operator
-    digest: 1546d05cec2b9a9bc619f7c8fcd56501d14c167ffdc3cb061675768a85f5a520
+    digest: 787754b2e3f0b0989e02c6ff875a24feece8524e8613148e19655e9fb1218c12
     name: project-logging-operator
     urls:
     - assets/project-logging-operator/project-logging-operator-0.1.0.tgz
@@ -34,11 +34,11 @@ entries:
       catalog.cattle.io/rancher-version: '>= 2.6.5-0 <= 2.6.100-0'
       catalog.cattle.io/release-name: rancher-project-logging
     apiVersion: v2
-    appVersion: 0.1.0
-    created: "2022-08-17T11:30:31.523103+02:00"
+    appVersion: v0.1.0
+    created: "2022-08-17T14:39:18.398674+02:00"
     description: Creates rancher-logging ClusterFlows that automatically collect logs
       from all namespaces of a project
-    digest: eebce589602c641c22fb9e431f46a8aa9de55791aa5c7851e31d3784a69adb31
+    digest: 115c01b8247b7bbc72de9b5a6205f4bfe4f604cf94dd105258242654c518f9d7
     keywords:
     - logging
     kubeVersion: '>=1.16.0-0'

@@ -9,7 +9,7 @@ annotations:
   catalog.cattle.io/rancher-version: '>= 2.6.5-0 <= 2.6.100-0'
   catalog.cattle.io/release-name: project-logging-operator
 apiVersion: v2
-appVersion: 0.1.0
+appVersion: v0.1.0
 dependencies:
 - condition: helmProjectOperator.enabled
   name: helmProjectOperator
