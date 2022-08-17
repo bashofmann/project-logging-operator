@@ -1,0 +1,17 @@
+apiVersion: helm.cattle.io/v1alpha1
+kind: ProjectHelmChart
+metadata:
+  name: project-logging
+  namespace: cattle-project-p-nv7x4
+spec:
+  helmApiVersion: logging.cattle.io/v1alpha1
+  values:
+    match:
+      - select:
+          labels:
+            app: nginx
+    outputs:
+      - test-output
+    filters:
+      - stdout:
+          output_type: json

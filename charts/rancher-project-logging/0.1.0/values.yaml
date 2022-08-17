@@ -5,4 +5,15 @@ global:
     projectNamespaces: []
     projectID: ""
 
+# List of outputs for the Project Logging ClusterFlow, see https://banzaicloud.com/docs/one-eye/logging-operator/configuration/crds/v1beta1/clusterflow_types/#clusterflowspec-globaloutputrefs
 outputs: []
+
+# List of additional match configurations for the Project Logging ClusterFlow, see https://banzaicloud.com/docs/one-eye/logging-operator/configuration/crds/v1beta1/clusterflow_types/#clusterflowspec-match
+# For example match configurations, see https://banzaicloud.com/docs/one-eye/logging-operator/configuration/plugins/filters/
+# By default, the ClusterFlow will have a match configuration to only match logs from the namespaces within the project
+match: []
+
+# List of additional filters for the Project Logging ClusterFlow, see https://banzaicloud.com/docs/one-eye/logging-operator/configuration/crds/v1beta1/clusterflow_types/#clusterflowspec-filters
+# For a list of all filters with examples, see https://banzaicloud.com/docs/one-eye/logging-operator/configuration/plugins/filters/
+# By default, the ClusterFlow will have `record_modifier` filter that adds a `projectID` record with the ID of the project where the logs originated from
+filters: []

@@ -27,7 +27,7 @@ helmProjectOperator:
   enabled: true
 
   # ensures that all resources created by subchart show up as project-logging-operator
-  helmApiVersion: monitoring.cattle.io/v1alpha1
+  helmApiVersion: logging.cattle.io/v1alpha1
 
   nameOverride: project-logging-operator
 
@@ -43,7 +43,7 @@ helmProjectOperator:
   valuesOverride: {}
 
   image:
-    repository: rancher/project-logging-operator
+    repository: bashofmann/project-logging-operator
     tag: v0.1.0
     pullPolicy: IfNotPresent
 

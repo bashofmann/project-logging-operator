@@ -1,11 +1,25 @@
+apiVersion: logging.banzaicloud.io/v1beta1
 kind: ClusterFlow
 metadata:
-  name: flow-sample
+  name: project-logging-flow-{{ .Values.global.cattle.projectID }}
+  labels: {{ include "rancher-project-logging.labels" . | nindent 4 }}
   namespace: cattle-logging-system
 spec:
   match:
+{{- if .Values.match }}
+{{ .Values.match | toYaml | indent 2 }}
+{{- end }}
   - select:
       namespaces:
 {{ .Values.global.cattle.projectNamespaces | toYaml | indent 6 }}
+{{- if .Values.outputs }}
   globalOutputRefs:
 {{ .Values.outputs | toYaml | indent 2 }}
+{{- end }}
+  filters:
+  - record_modifier:
+      records:
+        - projectID: {{ .Values.global.cattle.projectID }}
+{{- if .Values.filters }}
+{{ .Values.filters | toYaml | indent 2 }}
+{{- end }}
